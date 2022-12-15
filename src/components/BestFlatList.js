@@ -44,12 +44,12 @@ export default class BestFlatList extends Component {
                         <div className="col-lg-12">
                             <Title title={title.text} description={title.description} />
                             <Slider {...settings}>
-                                <BestFlatItem flatState="For Rent"  />
                                 <BestFlatItem flatState="For Sale"  />
-                                <BestFlatItem flatState="For Rent"  />
-                                <BestFlatItem flatState="For Rent"  />
                                 <BestFlatItem flatState="For Sale"  />
-                                <BestFlatItem flatState="For Rent"  />
+                                <BestFlatItem flatState="For Sale"  />
+                                <BestFlatItem flatState="For Sale"  />
+                                <BestFlatItem flatState="For Sale"  />
+                                <BestFlatItem flatState="For Sale"  />
                             </Slider>
                         </div>
                     </div>

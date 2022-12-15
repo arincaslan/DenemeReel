@@ -20,22 +20,12 @@ const FlatDetail = () => {
 
     return (
         <div className="flat-detail">
-            <div className="page-top">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <h1 className="page-title">DETAIL</h1>
-                            <h2 className="page-description">Lorem ipsum dolor sit amet</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div className="container mt-5 mb-5">
                 <div className="row">
                     <div className="col-lg-12">
                         <div className="fd-top flat-detail-content">
                             <div>
-                                <h3 className="flat-detail-title">Lorem ipsum dolor sit amet.</h3>
+                                <h3 className="flat-detail-title">İlan Adı</h3>
                                 <p className="fd-address"> <i className="fas fa-map-marker-alt"></i>
                                 Lorem ipsum dolor sit amet</p>
                             </div>
@@ -47,7 +37,7 @@ const FlatDetail = () => {
                         <div className="row">
                             <div className="col-lg-8">
                                 <div className="fd-item">
-                                    <h4>Description</h4>
+                                    <h4>İlan Açıklama</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
                                 </div>
                                 <div className="fd-item fd-property-detail">

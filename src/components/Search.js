@@ -15,7 +15,13 @@ const Search = () => {
                 ></input>
               </div>
               <div className="col-md-4">
-                <select className={classes.searchSelector}>
+                <select
+                  className={classes.searchSelector}
+                  style={{
+                    backgroundImage:
+                      "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e\")",
+                  }}
+                >
                   <option selected>Country Type</option>
                   <option value="1">Country 1</option>
                   <option value="2">Country 2</option>
@@ -23,7 +29,13 @@ const Search = () => {
                 </select>
               </div>
               <div className="col-md-4">
-                <select className={classes.searchSelector}>
+                <select
+                  className={classes.searchSelector}
+                  style={{
+                    backgroundImage:
+                      "url(\"data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e\")",
+                  }}
+                >
                   <option selected>Location</option>
                   <option value="1">Location 1</option>
                   <option value="2">Location 2</option>

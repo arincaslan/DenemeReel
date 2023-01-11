@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ImageGallery from 'react-image-gallery';
 
-const FlatDetail = (props) => {
+const CitizenFlatDetail = (props) => {
     const flatProps = props.location.state.thisFlatProps;
     
     const [citizenChecked, setCitizenChecked] = useState(true);
@@ -40,7 +40,7 @@ const FlatDetail = (props) => {
                                     {flatProps.propsCountry} / {flatProps.propsCity}</p>
                             </div>
                             <div>
-                                <span className="fd-price">${flatProps.propsPrice}</span>
+                                <span className="fd-price">${flatProps.propsCityzenPrice}</span>
                             </div>
                         </div>
                         <ImageGallery flickThreshold={0.50} slideDuration={0} items={images} showNav={false} showFullscreenButton={false} showPlayButton={false} />
@@ -156,4 +156,4 @@ const FlatDetail = (props) => {
     )
 }
 
-export default FlatDetail
+export default CitizenFlatDetail

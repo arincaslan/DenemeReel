@@ -1,5 +1,4 @@
-import Title from "./Title";
-import FlatItem from "./FlatItem";
+import CitizenFlatItem from "./CitizenFlatItem";
 import instance from "./FireAxios";
 import { useState, useEffect } from "react";
 import {
@@ -17,7 +16,7 @@ import {
 import { BsFilter } from "react-icons/bs";
 import classes from "./Flatlist.module.css";
 
-const FlatList = () => {
+const CitizenFlatList = () => {
   const { isOpen, onToggle } = useDisclosure();
   const [results, setResults] = useState([]);
   const fetchedResults = [];
@@ -26,8 +25,14 @@ const FlatList = () => {
   const [filterToggle, setFilterToggle] = useState(false);
   const countries = [];
   const cities = [];
-
-
+  const citizenResults = []; 
+  
+  results.map((x) => {
+    if (x.VatandaşlıkDahilFiyat.length > 0) {
+        citizenResults.push(x)
+    }
+  })  
+console.log(citizenResults);
 
   results.map((x) => {
     countries.push(x.Ulke);
@@ -74,7 +79,7 @@ const FlatList = () => {
     setFilterToggle(false)
   };
   const applyFilterValues = () => {
-    const filterCountry = filterThis.countryFilter.length > 0 ? results.filter((item) => item.Ulke == filterThis.countryFilter) : results;
+    const filterCountry = filterThis.countryFilter.length > 0 ? citizenResults.filter((item) => item.Ulke == filterThis.countryFilter) : citizenResults;
     const filterCity = filterThis.cityFilter.length > 0 ? filterCountry.filter((item) => item.Sehir == filterThis.cityFilter) : filterCountry;
     const filterRooms = filterThis.roomFilter.length > 0 ? filterCountry.filter((item) => item.OdaSayısı == filterThis.roomFilter) : filterCity;
     const filterBaths = filterThis.bathFilter.length > 0 ? filterRooms.filter((item) => item.BanyoSayısı == filterThis.bathFilter) : filterRooms;
@@ -260,7 +265,7 @@ const FlatList = () => {
           {filterToggle ?
             filteredResults.map((x) => {
               return (
-                <FlatItem
+                <CitizenFlatItem
                   flatBath={x.BanyoSayısı}
                   flatChecked={x.VatandaşlıkCheck}
                   flatCityzenPrice={x.VatandaşlıkDahilFiyat}
@@ -278,9 +283,9 @@ const FlatList = () => {
               );
             })
             :
-            results.map((x) => {
+            citizenResults.map((x) => {
               return (
-                <FlatItem
+                <CitizenFlatItem
                   flatBath={x.BanyoSayısı}
                   flatChecked={x.VatandaşlıkCheck}
                   flatCityzenPrice={x.VatandaşlıkDahilFiyat}
@@ -304,4 +309,4 @@ const FlatList = () => {
   );
 };
 
-export default FlatList;
+export default CitizenFlatList;

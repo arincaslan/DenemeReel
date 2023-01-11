@@ -41,11 +41,13 @@ const BestFlatItem = (
                     <Link >
                         <img className="best-estate-img" src={flatPic} alt="flat" />
                     </Link>
-                    <div style={{"fontSize" :"11px!important"}} className={`best-estate-state ${flatState === "For Sale" ? "bg-green" : "bg-red"}`}>{flatState}</div>
+                    <div className={`best-estate-state ${flatState === "For Sale" ? "bg-green" : "bg-red"}`}>{flatState}</div>
                 </div>
                 <div className="best-estate-content">
-
-                    <span><Link to={{pathname: "/flat/:slug", state: {thisFlatProps}}}>{flatAd}</Link></span>
+                        {flatState ==="For Sale" ?
+                        <span><Link to={{ pathname: "/flat/:slug" , state: {thisFlatProps}}}>{flatAd}</Link></span>
+                        : <span><Link to={{ pathname: "/citizenflat/:slug" , state: {thisFlatProps}}}>{flatAd}</Link></span>
+                    }
                 </div>
                 <div className="best-estate-features">
                     <div className="d-flex">

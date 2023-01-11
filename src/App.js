@@ -1,6 +1,6 @@
 import "./App.css";
 import FlatDetail from "./components/FlatDetail";
-
+import AddPost from "./components/AddPost";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
@@ -13,8 +13,8 @@ import AdminLogin from "./components/AdminLogin";
 import Navbar from "./components/Navbar";
 import FlatList from "./components/FlatList";
 import { auth } from "./components/FireImage";
-import { useEffect, useState } from "react";
-
+import CitizenFlatList from "./components/CitizenFlatList";
+import CitizenFlatDetail from "./components/CitizenFlatDetail";
 
 function App() {
   const random = (auth.config.apiKey)
@@ -31,7 +31,10 @@ function App() {
           <Route path="/blog" exact component={Blog}></Route>
           <Route path="/blog/:id" component={BlogDetail}></Route>
           <Route path="/flat/:slug" component={FlatDetail}></Route>
+          <Route path="/citizenFlat/:slug" component={CitizenFlatDetail}></Route>
           <Route path="/flatList" component={FlatList}></Route>
+          <Route path="/addPost" component={AddPost}></Route>
+          <Route path="/citizenFlatList" component={CitizenFlatList}></Route>
           <Route path={"/admin/" + random} exact component={Admin}></Route>
           <Route path="/adminLogin" >
             <AdminLogin props={random} />

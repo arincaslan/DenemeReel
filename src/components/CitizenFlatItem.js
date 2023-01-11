@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const FlatItem = ({
+const CitizenFlatItem = ({
   flatRoom,
   flatAd,
   flatBath,
@@ -41,7 +41,7 @@ const FlatItem = ({
             <span  className="item-title">
               {flatAd}
             </span>
-            <span className="item-price">${flatPrice}</span>
+            <span className="item-price">${flatCityzenPrice}</span>
           </div>
           <div className="item-icon d-flex alig-items-center justify-content-between">
             <div>
@@ -51,7 +51,7 @@ const FlatItem = ({
             <div>
               <i className="fas fa-check-circle"></i> <span> {flatCountry} </span>
             </div>
-            <Link to={{pathname: "/flat/:slug", state: {thisFlatProps}}} className="item-title">
+            <Link to={{pathname: "/citizenFlat/:slug", state: {thisFlatProps}}} className="item-title">
               <button className="btn btn-detail">View</button>
             </Link>
           </div>
@@ -61,4 +61,4 @@ const FlatItem = ({
   );
 };
 
-export default FlatItem;
+export default CitizenFlatItem;

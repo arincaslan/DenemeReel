@@ -55,15 +55,15 @@ const Navbar = () => {
                 <a href="/flatList" class="dropdown-item">
                   Property List
                 </a>
-                <a href="property-type.html" class="dropdown-item">
-                  Citizenship Properties
+                <a href="/citizenFlatList" class="dropdown-item">
+                  Citizenship Properties (TR)
                 </a>
               </div>
             </div>
           </div>
-          <li href="" class="btn btn-primary px-3 d-none d-lg-flex">
+          <Link to="/addPost" class="btn btn-primary px-3 d-none d-lg-flex">
             Add Property
-          </li>
+          </Link>
         </div>
       </nav>
     </div>

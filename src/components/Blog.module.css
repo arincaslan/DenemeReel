@@ -1,0 +1,51 @@
+.pageTopBlog{
+    position: relative;
+    z-index: 1;
+    bottom: 130px;
+    color: white;
+  }
+
+.infoTags{
+    position: relative;
+    font-size: 2rem;
+    color: #0E2E50;
+    text-shadow: black 0px 0px 2px;
+    font-weight: 800;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 25px;
+}  
+
+.pageContent{
+    margin-bottom: 5em;
+}  
+
+.blogHeadImage{
+    width: 100%;
+    height: fit-content;
+    max-height: 550px;
+  }
+
+.headContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headText{
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: black 0px 0px 2px;
+}
+
+@media (max-width: 500px) {
+    .headText{
+        font-size: 2.5rem;
+        top: 170px;
+
+    }
+}

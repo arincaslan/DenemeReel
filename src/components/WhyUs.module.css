@@ -1,0 +1,62 @@
+.container{
+    display: flex;
+    width: 100%;
+    margin-bottom: 70px;
+    padding: 40px;
+    max-height: 800;
+}
+.headContainer{
+    display: flex;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.pContainer{
+    display: flex;
+    text-align: center;
+    padding: 6px;
+}
+
+@media (max-width:500px){
+    .ml15 {
+        font-size: 25px!important;
+        margin-bottom: 0px!important;
+
+      }
+      .container{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 300px!important;
+        padding: 20px;
+        text-align: center;
+        justify-content: space-between!important;
+    }
+    .pWord{
+        font-weight: 400;
+        font-size: 13px!important;
+    }
+    .headContainer{
+        display: flex;
+        text-align: center;
+        padding-bottom: 0px!important;
+        justify-content: center;
+        align-items: center;
+    }  
+}
+
+.ml15 {
+    font-weight: 800;
+    font-size: 3.8em;
+    text-transform: uppercase;
+  }
+  
+  .ml15 .word {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+.pWord{
+    font-weight: 400;
+    font-size: 1.5em;
+}
+

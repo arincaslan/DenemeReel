@@ -1,17 +1,29 @@
+import Search from "./Search";
+import headerImage from "../header.jpg";
+import classes from "./Contact.module.css";
+
 const Contact = () => {
     return (
         <section className="contact">
-            <div className="page-top">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-12">
-                            <h1 className="page-title">Contact</h1>
-                            <h2 className="page-description">Contact</h2>
-                        </div>
-                    </div>
+            <div className={classes.pageTopBlog}>
+                        <div class="row g-0 align-items-center flex-column-reverse flex-md-row">
+                            <div class="col-md-6 p-5 mt-lg-5">
+                                <h1 class="display-5 animated fadeIn mb-4">Contact</h1>
+                                <nav aria-label="breadcrumb animated fadeIn">
+                                    <ol class="breadcrumb text-uppercase">
+                                        <li class="breadcrumb-item text-body active" aria-current="page">You can contact us via Wattsapp Icon</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                            <div class="col-md-6 animated fadeIn">
+                                <img class="img-fluid" src={headerImage} alt=""/>
+                            </div>
+                </div>
+                <div style={{ "marginTop": "10px" }}>
+                    <Search />
                 </div>
             </div>
-            <div className="page-content">
+            <div className={classes.pageContent}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12">
@@ -58,7 +70,7 @@ const Contact = () => {
                                     <textarea type="text" className="ta-contact" rows="4"></textarea>
                                 </div>
                                 <div className="col-lg-12">
-                                    <button className="btn-contact">Send Message</button>
+                                    <button onClick={() => {alert("Message Sent")}} className="btn-contact">Send Message</button>
                                 </div>
                             </div>
                         </div>

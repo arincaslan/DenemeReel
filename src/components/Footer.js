@@ -1,68 +1,87 @@
-import React from "react"
+import React from "react";
+import img1 from "../property-1.jpg";
+import img2 from "../property-2.jpg";
+import img3 from "../property-3.jpg";
+import img4 from "../property-4.jpg";
+import img5 from "../property-5.jpg";
+import img6 from "../property-6.jpg";
 const Footer = () => {
     return (
-        <section className="footer">
 
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-6 col-md-6">
-                        <i className="fas fa-home"></i>
-                        <span className="footer-other-text d-block mt-4 mb-3">
-                            IG-Reel Estate is an product of İğdir İnşaat A.Ş. 
+        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5">
+                <div class="row g-5">
+                    <div class="col-lg-3 col-md-6">
+                        <h5 style={{"fontWeight" : "700"}} class="text-white mb-4">Get In Touch</h5>
+                        <p class="mb-2">Tütüncü Mehmet Efendi Cad. / Kadıköy / İstanbul / Turkiye</p>
+                        <p class="mb-2">+090 532 496 95 76</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@igestate.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 style={{"fontWeight" : "700"}} class="text-white mb-4">Quick Links</h5>
+                        <a class="btn btn-link text-white-50" href="/about">About Us</a>
+                        <a class="btn btn-link text-white-50" href="/contact">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="/flatList">Our Services</a>
+                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 style={{"fontWeight" : "700"}} class="text-white mb-4">Photo Gallery</h5>
+                        <div class="row g-2 pt-2">
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src={img1} alt=""/>
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src={img2} alt=""/>
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src={img3} alt=""/>
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src={img4} alt=""/>
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src={img5} alt=""/>
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid rounded bg-light p-1" src={img6} alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h5 style={{"fontWeight" : "700"}} class="text-white mb-4 fw-5">Disclaimer</h5>
+                        <p> IG-Reel Estate is an product of İğdir İnşaat A.Ş. 
                             The information contained in this website is for general information purposes only. 
-                            The information is provided by [İğdir İnşaat A.Ş] and while we endeavour to keep the information up to date and correct, 
-                            we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability 
-                            with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. 
-                            Any reliance you place on such information is therefore strictly at your own risk.
-                        </span>
-                        <div className="footer-social">
-                            <div className="footer-social-item"><i className="fab fa-facebook"></i></div>
-                            <div className="footer-social-item"><i className="fab fa-twitter"></i></div>
-                            <div className="footer-social-item"> <i className="fab fa-instagram"></i></div>
-                        </div>
+                            Any reliance you place on such information is therefore strictly at your own risk.</p>
                     </div>
-                    <div className="col-lg-6 col-md-6 d-flex">
-                    <div className="col-lg-6 col-md-6">
-                        <p className="footer-title">Menu</p>
-                        <ul className="footer-ul">
-                            <li href = "/">Home</li>
-                            <li href="/blog">Blog</li>
-                            <li  href="/about">About</li>
-                            <li href="/contact">Contact</li>
-                        </ul>
-                        </div>
-                        <div className="col-lg-6 col-md-6 col-12 ">
-                        <p className="footer-title">Contact</p>
-                        <ul className="footer-ul">
-                            <li className="d-flex">
-                                <div className="footer-info-item"><i className="fas fa-clock"></i></div> <span>08:00-18:00</span>
-                            </li>
-                            <li className="d-flex">
-                                <div className="footer-info-item" ><i className="fas fa-envelope"></i></div> <span>a.arincaslan@gmail.com</span>
-                            </li>
-                            <li className="d-flex">
-                                <div className="footer-info-item"><i className="fas fa-map-marker-alt"></i></div> <span>Tütüncü Mehmet Efendi Cad. İstanbul/Türkiye</span>
-                            </li>
-                            <li className="d-flex">
-                                <div className="footer-info-item"><i className="fas fa-phone-alt"></i></div> <span>0532 496 95 76</span>
-                            </li>
-                        </ul>
-                    </div>
-                    </div>
-                    {/*<div className="col-lg-3 col-md-6">
-                        <p className="footer-title">Subscribe</p>
-                        <span className="footer-other-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore dolore magna
-                        </span>
-                        <div className="subscribe-area mb-2 mt-2">
-                            <input type="text" placeholder="Email" className="inp-footer w-100" />
-                        </div>
-                        <button className="btn-subscribe">Subscribe</button>
-                    </div>*/}
-
                 </div>
             </div>
-        </section>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">IG-Reel Estate</a>, All Right Reserved. 
+							
+							
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
 

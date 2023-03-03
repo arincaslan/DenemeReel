@@ -65,26 +65,29 @@ const BestFlatList = () => {
         <div className="row">
           <div className="col-lg-12 ">
             <Title title={title.text} description={title.description} />
-            <Slider style={{"display" : "flex!important" , "justifyContent":"center!important"}} {...settings}>
+            <Slider style={{ "display": "flex!important", "justifyContent": "center!important" }} {...settings}>
               {results.map((x) => {
                 return (
                   <BestFlatItem
                     flatBath={x.BanyoSayısı}
-                    flatChecked = {x.VatandaşlıkCheck}
-                    flatCityzenPrice = {x.VatandaşlıkDahilFiyat}
-                    flatM2 = {x.EvM2}
-                    flatCountry = {x.Ulke}
-                    flatCity = {x.Sehir}
-                    flatSite = {x.Ilce}
-                    flatInfo = {x.Açıklama}
+                    flatChecked={x.VatandaşlıkCheck}
+                    flatCityzenPrice={x.VatandaşlıkDahilFiyat}
+                    flatM2={x.EvM2}
+                    flatCountry={x.Ulke}
+                    flatCity={x.Sehir}
+                    flatSite={x.Ilce}
+                    flatInfo={x.Açıklama}
                     flatAd={x.IlanAdı}
                     flatRoom={x.OdaSayısı}
-                    flatState={x.VatandaşlıkDahilFiyat.length > 0 ? "Citizenship" :  "For Sale"}
-                    flatPrice = {x.Fiyat}
+                    flatState={x.VatandaşlıkDahilFiyat.length > 0 ? "Citizenship" : "For Sale"}
+                    flatPrice={x.Fiyat}
                     flatPic={x.EvResimleri[0]}
                     flatAllPics={x.EvResimleri}
+                    flatContactName={x.ContactAd}
+                    flatContactGSM={x.ContactPhone}
+                    flatFurnished={x.FurnishedState}
                   />
-                  
+
                 );
               })}
             </Slider>

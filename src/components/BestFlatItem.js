@@ -16,22 +16,28 @@ const BestFlatItem = (
         flatCity,
         flatSite,
         flatInfo,
-        flatAllPics
+        flatAllPics,
+        flatContactName,
+        flatContactGSM,
+        flatFurnished
     }) => {
 
     const thisFlatProps = {
-        'propsRoom': flatRoom,
-        'propsName': flatAd,
-        'propsSaloon': flatBath,
-        'propsPrice': flatPrice,
-        'propsPics': flatAllPics,
-        'propsChecked': flatChecked,
-        'propsCityzenPrice': flatCityzenPrice,
-        'propsM2': flatM2,
-        'propsCountry': flatCountry,
-        'propsCity': flatCity,
-        'propsSite': flatSite,
-        'propsInfo': flatInfo
+        propsRoom: flatRoom,
+        propsName: flatAd,
+        propsBath: flatBath,
+        propsPrice: flatPrice,
+        propsPics: flatAllPics,
+        propsChecked: flatChecked,
+        propsCityzenPrice: flatCityzenPrice,
+        propsM2: flatM2,
+        propsCountry: flatCountry,
+        propsCity: flatCity,
+        propsSite: flatSite,
+        propsInfo: flatInfo,
+        propsContactName: flatContactName,
+        propsContactGSM: flatContactGSM,
+        propsFurnished: flatFurnished,
     }
 
     return (
@@ -44,9 +50,9 @@ const BestFlatItem = (
                     <div className={`best-estate-state ${flatState === "For Sale" ? "bg-green" : "bg-red"}`}>{flatState}</div>
                 </div>
                 <div className="best-estate-content">
-                        {flatState ==="For Sale" ?
-                        <span><Link to={{ pathname: "/flat/:slug" , state: {thisFlatProps}}}>{flatAd}</Link></span>
-                        : <span><Link to={{ pathname: "/citizenflat/:slug" , state: {thisFlatProps}}}>{flatAd}</Link></span>
+                    {flatState === "For Sale" ?
+                        <span><Link to={{ pathname: "/flat/:slug", state: { thisFlatProps } }}>{flatAd}</Link></span>
+                        : <span><Link to={{ pathname: "/citizenflat/:slug", state: { thisFlatProps } }}>{flatAd}</Link></span>
                     }
                 </div>
                 <div className="best-estate-features">
@@ -61,7 +67,7 @@ const BestFlatItem = (
                             <span>{flatBath} Baths</span>
                         </div>
                     </div>
-                    <h5 className="best-estate-price">${flatState=== "For Sale" ? flatPrice : flatCityzenPrice}</h5>
+                    <h5 className="best-estate-price">${flatState === "For Sale" ? flatPrice : flatCityzenPrice}</h5>
                 </div>
             </div>
         </div>

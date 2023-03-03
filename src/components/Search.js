@@ -22,7 +22,7 @@ const Search = () => {
   const [data, setData] = useState([]);
   const [query, setQuery] = useState("");
   const { isOpen, onToggle } = useDisclosure();
- 
+
 
 
 
@@ -69,7 +69,7 @@ const Search = () => {
     }
   }, [filterThis]);
 
-console.log(searchFilter(data));
+  console.log(searchFilter(data));
 
 
   return (
@@ -112,7 +112,7 @@ console.log(searchFilter(data));
             </div>
             {isOpen ?
               <div className="col-md-2">
-                <button onClick={() => {onToggle()}} className={classes.searchButton}>
+                <button onClick={() => { onToggle() }} className={classes.searchButton}>
                   Hide Search Results
                 </button>
               </div>
@@ -133,17 +133,17 @@ console.log(searchFilter(data));
               <Collapse animateOpacity in={isOpen}>
                 <Splide
                   options={{
-                    type:"loop",
+                    type: "loop",
                     autoWidth: true,
                     gap: "5px",
-                    rewind: true,                
+                    rewind: true,
                     clones: false,
                   }}
                   className="my-carousel"
                 >
 
                   {searchFilter(data).map((item) => (
-                    
+
                     <SplideSlide hasTrack={false} >
                       <BestFlatItem className={classes.flatCard}
                         flatBath={item.BanyoSayısı}
@@ -164,10 +164,13 @@ console.log(searchFilter(data));
                         flatPrice={item.Fiyat}
                         flatPic={item.EvResimleri[0]}
                         flatAllPics={item.EvResimleri}
+                        flatContactName={item.ContactAd}
+                        flatContactGSM={item.ContactPhone}
+                        flatFurnished={item.FurnishedState}
                       >
                       </BestFlatItem>
                     </SplideSlide>
-                    
+
                   ))}
 
                 </Splide>

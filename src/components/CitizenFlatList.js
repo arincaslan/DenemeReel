@@ -276,6 +276,9 @@ console.log(citizenResults);
                   flatPrice={x.Fiyat}
                   flatPic={x.EvResimleri[0]}
                   flatAllPics={x.EvResimleri}
+                  flatContactName={x.ContactAd}
+                  flatContactGSM={x.ContactPhone}
+                  flatFurnished={x.FurnishedState}
                 />
               );
             })
@@ -296,6 +299,9 @@ console.log(citizenResults);
                   flatPrice={x.Fiyat}
                   flatPic={x.EvResimleri[0]}
                   flatAllPics={x.EvResimleri}
+                  flatContactName={x.ContactAd}
+                  flatContactGSM={x.ContactPhone}
+                  flatFurnished={x.FurnishedState}
                 />
               );
             })

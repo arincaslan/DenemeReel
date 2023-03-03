@@ -18,6 +18,7 @@ import { BsFilter } from "react-icons/bs";
 import classes from "./Flatlist.module.css";
 
 const FlatList = () => {
+
   const { isOpen, onToggle } = useDisclosure();
   const [results, setResults] = useState([]);
   const fetchedResults = [];
@@ -27,8 +28,7 @@ const FlatList = () => {
   const countries = [];
   const cities = [];
 
-
-
+console.log(results);
 
   results.map((x) => {
     countries.push(x.Ulke);
@@ -92,10 +92,7 @@ const FlatList = () => {
 
   };
 
-  const title = {
-    text: "Search Property",
-    description: "Use Filter & Find the house you are looking for...",
-  };
+
   return (
     <section className="section-all-re">
       <div className="container">
@@ -267,6 +264,9 @@ const FlatList = () => {
                   flatPrice={x.Fiyat}
                   flatPic={x.EvResimleri[0]}
                   flatAllPics={x.EvResimleri}
+                  flatContactName={x.ContactAd}
+                  flatContactGSM={x.ContactPhone}
+                  flatFurnished={x.FurnishedState}
                 />
               );
             })
@@ -287,6 +287,9 @@ const FlatList = () => {
                   flatPrice={x.Fiyat}
                   flatPic={x.EvResimleri[0]}
                   flatAllPics={x.EvResimleri}
+                  flatContactName={x.ContactAd}
+                  flatContactGSM={x.ContactPhone}
+                  flatFurnished={x.FurnishedState}
                 />
               );
             })

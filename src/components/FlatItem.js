@@ -14,6 +14,9 @@ const FlatItem = ({
   flatSite,
   flatInfo,
   flatAllPics,
+  flatContactName,
+  flatContactGSM,
+  flatFurnished
 }) => {
   const thisFlatProps = {
     propsRoom: flatRoom,
@@ -28,6 +31,9 @@ const FlatItem = ({
     propsCity: flatCity,
     propsSite: flatSite,
     propsInfo: flatInfo,
+    propsContactName: flatContactName,
+    propsContactGSM: flatContactGSM,
+    propsFurnished: flatFurnished,
   };
 
   return (
